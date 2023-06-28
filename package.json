@@ -2,7 +2,7 @@
   "name": "explore-education-statistics",
   "private": true,
   "devDependencies": {
-    "@types/jest": "^26.0.14",
+    "@types/jest": "^29.0.0",
     "@typescript-eslint/eslint-plugin": "^5.51.0",
     "@typescript-eslint/parser": "^5.51.0",
     "caniuse-lite": "^1.0.30001314",
