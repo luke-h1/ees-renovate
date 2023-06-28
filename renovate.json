@@ -3,11 +3,13 @@
   "extends": [
     "config:base",
     ":separateMultipleMajorReleases",
+    ":separatePatchReleases",
     ":preserveSemverRanges",
     ":rebaseStalePrs",
     "group:allNonMajor",
     ":semanticCommits"
   ],
+  
   "lockFileMaintenance": {
     "commitMessageAction": "Update",
     "extends": ["group:all"],
