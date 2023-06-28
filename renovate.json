@@ -28,6 +28,16 @@
       "matchFiles": ["**/*.csproj"],
       "matchUpdateTypes": ["major"],
       "groupName": "dotnet (major)"
+    },
+    {
+      "matchFiles": ["**/pipenv.lock"],
+      "matchUpdateTypes": ["patch", "minor"],
+      "groupName": "python (non-major)"
+    },
+    {
+      "matchFiles": ["**/pipenv.lock"],
+      "matchUpdateTypes": ["major"],
+      "groupName": "python (major)"
     }
   ]
 }
