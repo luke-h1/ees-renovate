@@ -10,6 +10,8 @@
   ],
   "packageRules": [
     {
+      "matchManagers": ["npm"],
+      "dependencyDashboardTitle": "NPM minor Dependency Dashboard",
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["patch", "minor"],
       "groupName": "devDependencies (non-major)"
@@ -29,6 +31,5 @@
       "matchUpdateTypes": ["minor"],
       "groupName": "dependencies (minor)"
     }
-
   ]
 }
