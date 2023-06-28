@@ -2,92 +2,70 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:base",
-    ":separateMultipleMajorReleases",
-    ":separatePatchReleases",
     ":preserveSemverRanges",
-    ":rebaseStalePrs",
-    "group:allNonMajor",
-    ":semanticCommits"
+    ":separateMajorReleases",
+    ":separateMinorReleases",
+    ":separatePatchReleases",
+    ":separateScheduledMaintenanceReleases",
+    ":separateStableReleases",
+    ":separateUnstableReleases"
   ],
-  
-  "lockFileMaintenance": {
-    "commitMessageAction": "Update",
-    "extends": ["group:all"],
-    "separateMajorMinor": false
-  },
-  "dependencyDashboard": true,
-  "timezone": "Europe/London",
-  "addLabels": ["renovate"],
-  "azure-pipelines": {
-    "enabled": true
-  },
-  "vulnerabilityAlerts": {
-    "groupName": "renovate",
-    "dependencyDashboardApproval": false,
-    "minimumReleaseAge": "0d",
-    "rangeStrategy": "update-lockfile",
-    "commitMessageSuffix": "[SECURITY]",
-    "branchTopic": "{{{datasource}}}-{{{depName}}}-vulnerability",
-    "prCreation": "immediate"
-  },
   "packageRules": [
     {
-      "matchPackagePatterns": ["*"],
-      "rangeStrategy": "replace"
+      "groupName": "frontendDependencies",
+      "packagePatterns": ["^src/explore-education-statistics-*/"],
+      "matchDepTypes": ["dependencies"],
+      "enabled": true,
+      "automerge": true,
+      "updateTypes": ["minor", "patch"]
     },
     {
-      "matchPackageNames": ["@ckeditor"],
-      "enabled": false
+      "groupName": "frontendDevDependencies",
+      "packagePatterns": ["^src/explore-education-statistics-*/"],
+      "matchDepTypes": ["devDependencies"],
+      "enabled": true,
+      "automerge": true,
+      "updateTypes": ["minor", "patch"]
     },
     {
-      "matchDatasources": ["azure-pipelines-tasks"],
-      "extractVersion": "^(?<version>\\d+)",
-      "description": "Azure Pipelines Tasks"
+      "groupName": "backendDependencies",
+      "packagePatterns": ["GovUk"],
+      "matchDepTypes": ["dependencies"],
+      "enabled": true,
+      "automerge": true,
+      "updateTypes": ["minor", "patch"]
     },
     {
-      "matchManagers": ["nuget"],
-      "matchFiles": ["\\.csproj$"],
-      "groupSlug": "dotnet",
-      "groupName": "Backend non-major dependencies",
-      "matchUpdateTypes": [
-        "minor"
-      ]
-    },
-    {
-      "matchManagers": ["nuget"],
-      "matchFiles": ["\\.csproj$"],
-      "groupSlug": "dotnet",
-      "groupName": "Backend major dependencies",
-      "matchUpdateTypes": [
-        "major"
-      ]
-    },
-    {
-      "matchManagers": ["pipenv", "pyenv"],
-      "groupSlug": "python",
-      "groupName": "Python dependencies",
-      "description": "Python dependencies",
-      "matchUpdateTypes": [
-        "minor",
-        "major"
-      ]
-    },
-    {
-      "matchManagers": ["npm"],
-      "groupSlug": "frontend",
-      "groupName": "Frontend minor dependencies",
-      "matchUpdateTypes": [
-        "minor"
-      ]
-    },
-    {
-      "matchManagers": ["npm"],
-      "groupSlug": "frontend",
-      "groupName": "Frontend dependencies",
-      "description": "Frontend major dependencies",
-      "matchUpdateTypes": [
-        "major"
-      ]
+      "groupName": "backendDevDependencies",
+      "packagePatterns": ["GovUk"],
+      "matchDepTypes": ["devDependencies"],
+      "enabled": true,
+      "automerge": true,
+      "updateTypes": ["minor", "patch"]
     }
-  ]
+  ],
+  "ignoreDeps": [
+    "@types/*",
+    "babel-*",
+    "eslint-*",
+    "prettier-*"
+  ],
+  "ignorePaths": [
+    ".github",
+    "docs",
+    "public",
+    "build",
+    "dist",
+    "node_modules"
+  ],
+  "git": {
+    "ignorePaths": [
+      ".github",
+      "docs",
+      "public",
+      "build",
+      "dist",
+      "node_modules"
+    ]
+  }
 }
