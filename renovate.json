@@ -10,14 +10,24 @@
   ],
   "packageRules": [
     {
-      "matchDepTypes": ["dependencies"],
-      "matchUpdateTypes": ["major"],
-      "groupName": "dependencies (major)"
+      "matchFiles": ["**/package.json"],
+      "matchUpdateTypes": ["patch", "minor"],
+      "groupName": "frontend (non-major)"
     },
     {
-      "matchDepTypes": ["devDependencies"],
+      "matchFiles": ["**/package.json"],
+      "matchUpdateTypes": ["major"],
+      "groupName": "frontend (major)"
+    },
+    {
+      "matchFiles": ["**/*.csproj"],
       "matchUpdateTypes": ["patch", "minor"],
-      "groupName": "devDependencies (non-major)"
+      "groupName": "dotnet (non-major)"
+    },
+    {
+      "matchFiles": ["**/*.csproj"],
+      "matchUpdateTypes": ["major"],
+      "groupName": "dotnet (major)"
     }
   ]
 }
