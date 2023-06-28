@@ -43,29 +43,5 @@
       "automerge": true,
       "updateTypes": ["minor", "patch"]
     }
-  ],
-  "ignoreDeps": [
-    "@types/*",
-    "babel-*",
-    "eslint-*",
-    "prettier-*"
-  ],
-  "ignorePaths": [
-    ".github",
-    "docs",
-    "public",
-    "build",
-    "dist",
-    "node_modules"
-  ],
-  "git": {
-    "ignorePaths": [
-      ".github",
-      "docs",
-      "public",
-      "build",
-      "dist",
-      "node_modules"
-    ]
-  }
+  ]
 }
