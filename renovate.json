@@ -31,28 +31,32 @@
   },
   "packageRules": [
     {
-      "matchPackageNames": ["^ckeditor"],
+      "matchPackageNames": ["@ckeditor"],
       "enabled": false
     },
     {
       "matchDatasources": ["azure-pipelines-tasks"],
-      "extractVersion": "^(?<version>\\d+)"
+      "extractVersion": "^(?<version>\\d+)",
+      "description": "Azure Pipelines Tasks"
     },
     {
       "matchManagers": ["nuget"],
       "matchFiles": ["\\.csproj$"],
       "groupSlug": "dotnet",
-      "groupName": "Backend dependencies"
+      "groupName": "Backend dependencies",
+      "description": "C# dependencies"
     },
     {
       "matchManagers": ["pipenv", "pyenv"],
       "groupSlug": "python",
-      "groupName": "Python dependencies"
+      "groupName": "Python dependencies",
+      "description": "Python dependencies"
     },
     {
       "matchManagers": ["npm"],
       "groupSlug": "frontend",
-      "groupName": "Frontend dependencies"
+      "groupName": "Frontend dependencies",
+      "description": "Frontend dependencies"
     }
   ]
 }
