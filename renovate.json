@@ -11,9 +11,7 @@
   ],
   "lockFileMaintenance": {
     "commitMessageAction": "Update",
-    "extends": [
-      "group:all"
-    ],
+    "extends": ["group:all"],
     "separateMajorMinor": false
   },
   "dependencyDashboard": true,
@@ -40,6 +38,23 @@
     {
       "matchDatasources": ["azure-pipelines-tasks"],
       "extractVersion": "^(?<version>\\d+)"
+    },
+    {
+      "matchManagers": ["nuget"],
+      "matchFiles": ["\\.csproj$"],
+      "groupName": "Backend dependencies"
+    },
+    {
+      "matchManagers": ["pipenv", "pyenv"],
+      "groupName": "Python dependencies"
+    },
+    {
+      "matchManagers": ["nodenv, nvm"],
+      "groupName": "Node version dependencies"
+    },
+    {
+      "matchManagers": ["npm"],
+      "groupName": "Frontend dependencies"
     }
   ]
 }
