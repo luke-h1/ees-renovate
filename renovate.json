@@ -10,34 +10,25 @@
   ],
   "packageRules": [
     {
-      "matchFiles": ["**/package.json"],
+      "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["patch", "minor"],
-      "groupName": "frontend (non-major)"
+      "groupName": "devDependencies (non-major)"
     },
     {
-      "matchFiles": ["**/package.json"],
+      "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["major"],
-      "groupName": "frontend (major)"
+      "groupName": "devDependencies (major)"
     },
     {
-      "matchFiles": ["**/*.csproj"],
-      "matchUpdateTypes": ["patch", "minor"],
-      "groupName": "dotnet (non-major)"
-    },
-    {
-      "matchFiles": ["**/*.csproj"],
+      "matchDepTypes": ["dependencies"],
       "matchUpdateTypes": ["major"],
-      "groupName": "dotnet (major)"
+      "groupName": "dependencies (major)"
     },
     {
-      "matchFiles": ["**/pipenv.lock"],
-      "matchUpdateTypes": ["patch", "minor"],
-      "groupName": "python (non-major)"
-    },
-    {
-      "matchFiles": ["**/pipenv.lock"],
-      "matchUpdateTypes": ["major"],
-      "groupName": "python (major)"
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["minor"],
+      "groupName": "dependencies (minor)"
     }
+
   ]
 }
