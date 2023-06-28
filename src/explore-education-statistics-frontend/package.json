@@ -81,7 +81,7 @@
     "next-router-mock": "0.8.0",
     "node-mocks-http": "^1.12.2",
     "normalize.css": "^8.0.1",
-    "react-test-renderer": "16.13.1",
+    "react-test-renderer": "17.0.2",
     "sass": "1.32.13",
     "stylelint": "^13.13.1",
     "stylelint-webpack-plugin": "^3.0.1",
