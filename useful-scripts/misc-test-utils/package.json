@@ -36,7 +36,7 @@
     "esbuild-runner": "^2.2.1",
     "form-data": "^4.0.0",
     "formdata-node": "^4.3.3",
-    "globby": "^11.0.4",
+    "globby": "^13.0.0",
     "node-stream-zip": "^1.15.0",
     "ora": "5.4.1",
     "pino": "8.4.1",
