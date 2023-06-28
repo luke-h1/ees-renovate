@@ -23,7 +23,6 @@
   },
   "vulnerabilityAlerts": {
     "groupName": "renovate",
-    "schedule": [],
     "dependencyDashboardApproval": false,
     "minimumReleaseAge": "0d",
     "rangeStrategy": "update-lockfile",
@@ -49,20 +48,46 @@
       "matchManagers": ["nuget"],
       "matchFiles": ["\\.csproj$"],
       "groupSlug": "dotnet",
-      "groupName": "Backend dependencies",
-      "description": "C# dependencies"
+      "groupName": "Backend non-major dependencies",
+      "matchUpdateTypes": [
+        "minor"
+      ]
+    },
+    {
+      "matchManagers": ["nuget"],
+      "matchFiles": ["\\.csproj$"],
+      "groupSlug": "dotnet",
+      "groupName": "Backend major dependencies",
+      "matchUpdateTypes": [
+        "major"
+      ]
     },
     {
       "matchManagers": ["pipenv", "pyenv"],
       "groupSlug": "python",
       "groupName": "Python dependencies",
-      "description": "Python dependencies"
+      "description": "Python dependencies",
+      "matchUpdateTypes": [
+        "minor",
+        "major"
+      ]
+    },
+    {
+      "matchManagers": ["npm"],
+      "groupSlug": "frontend",
+      "groupName": "Frontend minor dependencies",
+      "matchUpdateTypes": [
+        "minor"
+      ]
     },
     {
       "matchManagers": ["npm"],
       "groupSlug": "frontend",
       "groupName": "Frontend dependencies",
-      "description": "Frontend dependencies"
+      "description": "Frontend major dependencies",
+      "matchUpdateTypes": [
+        "major"
+      ]
     }
   ]
 }
