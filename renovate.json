@@ -10,36 +10,14 @@
   ],
   "packageRules": [
     {
-      "groupName": "frontendDependencies",
-      "packagePatterns": ["^src/explore-education-statistics-*/"],
       "matchDepTypes": ["dependencies"],
-      "enabled": true,
-      "automerge": true,
-      "updateTypes": ["minor", "patch"]
+      "matchUpdateTypes": ["major"],
+      "groupName": "dependencies (major)"
     },
     {
-      "groupName": "frontendDevDependencies",
-      "packagePatterns": ["^src/explore-education-statistics-*/"],
       "matchDepTypes": ["devDependencies"],
-      "enabled": true,
-      "automerge": true,
-      "updateTypes": ["minor", "patch"]
-    },
-    {
-      "groupName": "backendDependencies",
-      "packagePatterns": ["GovUk"],
-      "matchDepTypes": ["dependencies"],
-      "enabled": true,
-      "automerge": true,
-      "updateTypes": ["minor", "patch"]
-    },
-    {
-      "groupName": "backendDevDependencies",
-      "packagePatterns": ["GovUk"],
-      "matchDepTypes": ["devDependencies"],
-      "enabled": true,
-      "automerge": true,
-      "updateTypes": ["minor", "patch"]
+      "matchUpdateTypes": ["patch", "minor"],
+      "groupName": "devDependencies (non-major)"
     }
   ]
 }
