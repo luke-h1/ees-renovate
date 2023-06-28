@@ -34,19 +34,19 @@
     "prCreation": "immediate"
   },
   "packageRules": [
-    {
-      "groupName": "all non-major dependencies",
-      "groupSlug": "all-minor-patch",
-      "matchPackagePatterns": ["*"],
-      "matchUpdateTypes": ["minor", "patch"]
-    },
-    {
-      "groupName": "all major dependencies",
-      "groupSlug": "all-major",
-      "matchPackagePatterns": ["*"],
-      "matchUpdateTypes": ["major"],
-      "allowedVersions": "major"
-    },
+    // {
+    //   "groupName": "all non-major dependencies",
+    //   "groupSlug": "all-minor-patch",
+    //   "matchPackagePatterns": ["*"],
+    //   "matchUpdateTypes": ["minor", "patch"]
+    // },
+    // {
+    //   "groupName": "all major dependencies",
+    //   "groupSlug": "all-major",
+    //   "matchPackagePatterns": ["*"],
+    //   "matchUpdateTypes": ["major"],
+    //   "allowedVersions": "major"
+    // },
     {
       "matchPackageNames": ["^ckeditor"],
       "enabled": false
