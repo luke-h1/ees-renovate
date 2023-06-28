@@ -17,7 +17,7 @@
     "@swc/jest": "^0.2.22",
     "@types/archiver": "^5.1.0",
     "@types/form-data": "^2.5.0",
-    "@types/inquirer": "^7.3.2",
+    "@types/inquirer": "^8.0.0",
     "@types/node": "^18.7.6",
     "@types/rimraf": "^3.0.2",
     "@types/uuid": "^8.3.4",
