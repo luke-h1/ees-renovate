@@ -51,11 +51,6 @@
       "groupName": "Python dependencies"
     },
     {
-      "matchManagers": ["nodenv, nvm"],
-      "groupSlug": "node",
-      "groupName": "Node version dependencies"
-    },
-    {
       "matchManagers": ["npm"],
       "groupSlug": "frontend",
       "groupName": "Frontend dependencies"
