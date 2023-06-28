@@ -1,0 +1,96 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "skuPublic": {
+      "value": "P1V2 PremiumV2"
+    },
+    "skuData": {
+      "value": "P1V2 PremiumV2"
+    },
+    "skuContent": {
+      "value": "P1V2 PremiumV2"
+    },
+    "skuAdmin": {
+      "value": "P1V2 PremiumV2"
+    },
+    "skuAdminSignalR": {
+      "value": "Standard_S1"
+    },
+    "skuImporter": {
+      "value": "P2V2 PremiumV2"
+    },
+    "skuNotifier": {
+      "value": "S1 Standard"
+    },
+    "skuPublisher": {
+      "value": "S1 Standard"
+    },
+    "publicAppBasicAuth": {
+      "value": "false"
+    },
+    "useSubnets": {
+      "value": true
+    },
+    "deploySubnets": {
+      "value": true
+    },
+    "autoscalePublicApplication": {
+      "value": true
+    },
+    "devopsSPN": {
+      "value": "911681c3-8cc7-4afc-8355-4cf60359d743",
+      "metadata": {
+         "comments": "ObjectId for s101p-datahub-spn-ees-dfe-gov-uk"
+      }
+    },
+    "domain": {
+      "value": "explore-education-statistics.service.gov.uk"
+    },
+    "contentApiUrl": {
+      "value": "content.explore-education-statistics.service.gov.uk"
+    },
+    "dataApiUrl": {
+      "value": "data.explore-education-statistics.service.gov.uk"
+    },
+    "publicAppGATrackingId": {
+      "value": "G-9YG8ESXR5Y"
+    },
+    "storageAccountPrefix": {
+      "value": "sa"
+    },
+    "skuContentDb": {
+      "value": "GP_S_Gen5"
+    },
+    "tierContentDb": {
+      "value": "GeneralPurpose"
+    },
+    "capacityContentDb": {
+      "value": 4
+    },
+    "minCapacityContentDb": {
+      "value": "0.5"
+    },
+    "skuStatisticsDb": {
+      "value": "GP_Gen5"
+    },
+    "tierStatisticsDb": {
+      "value": "GeneralPurpose"
+    },
+    "capacityStatisticsDb": {
+      "value": 6
+    },
+    "enableAlerts": {
+      "value": true
+    },
+    "tableBuilderMaxTableCellsAllowed": {
+      "value": 1000000
+    },
+    "maxContentDbSizeBytes": {
+      "value": 2147483648
+    },
+    "maxStatsDbSizeBytes": {
+      "value": 1020054732800
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "schedule": ["every day"],
+  "extends": [
+    "config:base",
+    "config:semverAllMonthly",
+    ":separateMultipleMajorReleases",
+    ":preserveSemverRanges",
+    ":rebaseStalePrs",
+    "group:allNonMajor",
+    ":semanticCommits"
+  ],
+  "lockFileMaintenance": {
+    "commitMessageAction": "Update",
+    "extends": [
+      "group:all"
+    ],
+    "separateMajorMinor": false
+  },
+  "dependencyDashboard": true,
+  "timezone": "Europe/London",
+  "addLabels": ["renovate"],
+  "azure-pipelines": {
+    "enabled": true
+  },
+  "vulnerabilityAlerts": {
+    "groupName": "renovate",
+    "schedule": [],
+    "dependencyDashboardApproval": false,
+    "minimumReleaseAge": "0d",
+    "rangeStrategy": "update-lockfile",
+    "commitMessageSuffix": "[SECURITY]",
+    "branchTopic": "{{{datasource}}}-{{{depName}}}-vulnerability",
+    "prCreation": "immediate"
+  },
+  "packageRules": [
+    {
+      "groupName": "all non-major dependencies",
+      "groupSlug": "all-minor-patch",
+      "matchPackagePatterns": ["*"],
+      "matchUpdateTypes": ["minor", "patch"]
+    },
+    {
+      "groupName": "all major dependencies",
+      "groupSlug": "all-major",
+      "matchPackagePatterns": ["*"],
+      "matchUpdateTypes": ["major"],
+      "allowedVersions": "major"
+    },
+    {
+      "matchPackageNames": ["^ckeditor"],
+      "enabled": false
+    },
+    {
+      "matchDatasources": ["azure-pipelines-tasks"],
+      "extractVersion": "^(?<version>\\d+)"
+    }
+  ]
+}
