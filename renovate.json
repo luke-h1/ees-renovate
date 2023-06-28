@@ -42,18 +42,22 @@
     {
       "matchManagers": ["nuget"],
       "matchFiles": ["\\.csproj$"],
+      "groupSlug": "dotnet",
       "groupName": "Backend dependencies"
     },
     {
       "matchManagers": ["pipenv", "pyenv"],
+      "groupSlug": "python",
       "groupName": "Python dependencies"
     },
     {
       "matchManagers": ["nodenv, nvm"],
+      "groupSlug": "node",
       "groupName": "Node version dependencies"
     },
     {
       "matchManagers": ["npm"],
+      "groupSlug": "frontend",
       "groupName": "Frontend dependencies"
     }
   ]
