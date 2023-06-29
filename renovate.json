@@ -27,10 +27,7 @@
   "packageRules": [
     {
       "matchPackageNames": ["explore-education-statistics-*"],
-      "groupName": "frontend",
-      "groupSlug": "explore-education-statistics",
-      "groupDescription": "Frontend packages"
-      
+      "groupSlug": "explore-education-statistics"
     }
   ]
 }
