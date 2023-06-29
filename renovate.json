@@ -1,13 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "ignorePaths": ["useful-scripts/**"],
-  "extends": [
-    "config:base",
-    ":separatePatchReleases",
-    ":preserveSemverRanges",
-    ":rebaseStalePrs",
-    ":semanticCommits"
-  ],
   "timezone": "Europe/London",
   "azure-pipelines": {
     "enabled": true
