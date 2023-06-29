@@ -8,7 +8,6 @@
     ":preserveSemverRanges",
     ":rebaseStalePrs",
     ":semanticCommits",
-    "group:all",
     "group:react",
     "group:dotnetMonorepo"
   ],
