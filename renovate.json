@@ -33,7 +33,7 @@
     {
       "groupName": "All frontend minor dependencies",
       "matchUpdateTypes": ["minor"],
-      "matchManagers": ["npm"],
+      "matchLanguages": ["javascript", "typescript"],
       "matchPackagePatterns": [
         "explore-education-statistics-admin",
         "explore-education-statistics-ckeditor",
@@ -45,7 +45,7 @@
     {
       "groupName": "All frontend major dependencies",
       "matchUpdateTypes": ["major"],
-      "matchManagers": ["npm"],
+      "matchLanguages": ["javascript", "typescript"],
       "labels": ["major dependencies"],
       "matchPackagePatterns": [
         "explore-education-statistics-admin",
@@ -55,20 +55,17 @@
       ]
     },
     {
-      "matchManagers": ["pipenv", "pyenv"],
+      "matchLanguages": ["python"],
       "groupName": "Python dependencies",
       "description": "Python dependencies",
       "matchUpdateTypes": ["minor", "major"]
     },
     {
-      "extends": "monorepo:dotnet",
-      "groupName": "dotnet monorepo",
-      "matchUpdateTypes": [
-        "digest",
-        "patch",
-        "minor",
-        "major"
-      ]
+      "matchLanguages": ["csharp"],
+      "matchPackagePatterns": ["GovUk.*"],
+      "matchUpdateTypes": ["minor", "major"],
+      "groupName": "backend dependencies",
+      "labels": ["backend", "minor dependencies"]
     }
   ]
 }
