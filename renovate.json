@@ -18,7 +18,6 @@
     "branchTopic": "{{{datasource}}}-{{{depName}}}-vulnerability",
     "prCreation": "immediate"
   },
-  "ignoreDeps": ["@ckeditor", "Mime", "Mime-Detective"],
   "packageRules": [
     {
       "matchDatasources": ["npm"],
@@ -44,6 +43,9 @@
       "matchDatasources": ["azure-pipelines-tasks"],
       "groupName": "azure-pipelines-tasks updates",
       "extractVersion": "^(?<version>\\d+)"
+    },
+    {
+      "excludeDepNames": ["@ckeditor/*", "Mime", "Mime-Detective"]
     }
   ]
 }
