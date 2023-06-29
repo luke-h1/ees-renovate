@@ -52,7 +52,7 @@
         "explore-education-statistics-ckeditor",
         "explore-education-statistics-common",
         "explore-education-statistics-frontend"
-      ],
+      ]
     },
     {
       "matchManagers": ["pipenv", "pyenv"],
