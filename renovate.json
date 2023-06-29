@@ -25,6 +25,11 @@
     "prCreation": "immediate"
   },
   "packageRules": [
-   
+    {
+      "groupName": "Frontend dependencies",
+      "matchPackagePatterns": [
+        "explore-education-*"
+      ]
+    }
   ]
 }
