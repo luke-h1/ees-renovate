@@ -2,11 +2,12 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:base",
+    ":separateMultipleMajorReleases",
+    ":separatePatchReleases",
     ":preserveSemverRanges",
     ":rebaseStalePrs",
-    ":semanticCommits",
-    ":separateMultipleMajorReleases",
-    ":separatePatchReleases"
+    "group:allNonMajor",
+    ":semanticCommits"
   ],
 
   "lockFileMaintenance": {
