@@ -6,8 +6,7 @@
     ":separatePatchReleases",
     ":preserveSemverRanges",
     ":rebaseStalePrs",
-    ":semanticCommits",
-    "group:byManager"
+    ":semanticCommits"
   ],
   "timezone": "Europe/London",
   "azure-pipelines": {
@@ -23,6 +22,14 @@
     "prCreation": "immediate"
   },
   "packageRules": [
+    {
+      "matchManagers": ["npm"],
+      "groupName": "{{manager}}"
+    },
+    {
+      "matchManagers": ["nuget"],
+      "groupName": "{{manager}}"
+    }
 
   ]
 }
