@@ -31,41 +31,16 @@
   },
   "packageRules": [
     {
-      "groupName": "All frontend minor dependencies",
-      "matchUpdateTypes": ["minor"],
-      "matchLanguages": ["javascript", "typescript"],
+      "dependencyDashboardApproval": true,
       "matchPackagePatterns": [
-        "explore-education-statistics-admin",
-        "explore-education-statistics-ckeditor",
-        "explore-education-statistics-common",
-        "explore-education-statistics-frontend"
+        "^explore-education-statistics-.*$"
       ],
-      "labels": ["minor dependencies"]
-    },
-    {
-      "groupName": "All frontend major dependencies",
-      "matchUpdateTypes": ["major"],
-      "matchLanguages": ["javascript", "typescript"],
-      "labels": ["major dependencies"],
-      "matchPackagePatterns": [
-        "explore-education-statistics-admin",
-        "explore-education-statistics-ckeditor",
-        "explore-education-statistics-common",
-        "explore-education-statistics-frontend"
-      ]
-    },
-    {
-      "matchLanguages": ["python"],
-      "groupName": "Python dependencies",
-      "description": "Python dependencies",
-      "matchUpdateTypes": ["minor", "major"]
-    },
-    {
-      "matchLanguages": ["csharp"],
-      "matchPackagePatterns": ["GovUk.*"],
-      "matchUpdateTypes": ["minor", "major"],
-      "groupName": "backend dependencies",
-      "labels": ["backend", "minor dependencies"]
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "groupName": "all frontend non-major dependencies",
+      "groupSlug": "all-minor-patch"
     }
   ]
 }
