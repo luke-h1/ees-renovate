@@ -18,6 +18,7 @@
     "branchTopic": "{{{datasource}}}-{{{depName}}}-vulnerability",
     "prCreation": "immediate"
   },
+  "ignoreDeps": ["@ckeditor", "Mime", "Mime-Detective"],
   "packageRules": [
     {
       "matchDatasources": ["npm"],
