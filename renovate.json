@@ -23,7 +23,6 @@
   },
   "packageRules": [
     {
-      "dependencyDashboardApproval": true,
       "matchPackagePatterns": [
         "^explore-education-statistics-.*$"
       ],
