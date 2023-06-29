@@ -56,14 +56,12 @@
     },
     {
       "matchManagers": ["pipenv", "pyenv"],
-      "groupSlug": "python",
       "groupName": "Python dependencies",
       "description": "Python dependencies",
       "matchUpdateTypes": ["minor", "major"]
     },
     {
       "matchManagers": ["nuget"],
-      "groupSlug": "dotnet",
       "groupName": "Dotnet dependencies",
       "description": "Dotnet dependencies",
       "matchUpdateTypes": ["minor", "major"],
