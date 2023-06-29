@@ -61,11 +61,14 @@
       "matchUpdateTypes": ["minor", "major"]
     },
     {
-      "matchManagers": ["nuget"],
-      "groupName": "Dotnet dependencies",
-      "description": "Dotnet dependencies",
-      "matchUpdateTypes": ["minor", "major"],
-      "matchPaths": ["src/GovUk.*"]
+      "extends": "monorepo:dotnet",
+      "groupName": "dotnet monorepo",
+      "matchUpdateTypes": [
+        "digest",
+        "patch",
+        "minor",
+        "major"
+      ]
     }
   ]
 }
