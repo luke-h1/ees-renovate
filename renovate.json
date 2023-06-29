@@ -20,16 +20,16 @@
   },
   "packageRules": [
     {
-      "matchManagers": ["npm"],
-      "groupName": "{{manager}}"
+      "matchDatasources": ["npm"],
+      "groupName": "npm"
     },
     {
-      "matchManagers": ["nuget"],
-      "groupName": "{{manager}}"
+      "matchDatasources": ["nuget"],
+      "groupName": "nuget"
     },
     {
-      "matchManagers": ["pipenv"],
-      "groupName": "{{manager}}"
+      "matchDatasources": ["pipenv"],
+      "groupName": "pipenv"
     }
 
   ]
