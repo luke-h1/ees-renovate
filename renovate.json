@@ -8,15 +8,7 @@
     ":rebaseStalePrs",
     ":semanticCommits"
   ],
-
-  "lockFileMaintenance": {
-    "commitMessageAction": "Update",
-    "extends": ["group:all"],
-    "separateMajorMinor": false
-  },
-  "dependencyDashboard": true,
   "timezone": "Europe/London",
-  "addLabels": ["renovate"],
   "azure-pipelines": {
     "enabled": true
   },
