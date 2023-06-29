@@ -34,7 +34,7 @@
     {
       "groupName": "All frontend minor dependencies",
       "matchUpdateTypes": ["minor"],
-      "matchPaths": [
+      "matchFiles": [
         "package.json",
         "src/explore-education-statistics-admin",
         "src/explore-education-statistics-ckeditor",
@@ -47,7 +47,7 @@
       "groupName": "All frontend major dependencies",
       "matchUpdateTypes": ["major"],
       "labels": ["major dependencies"],
-      "matchPaths": [
+      "matchFiles": [
         "package.json",
         "src/explore-education-statistics-admin",
         "src/explore-education-statistics-ckeditor",
