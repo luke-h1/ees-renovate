@@ -8,8 +8,7 @@
     ":preserveSemverRanges",
     ":rebaseStalePrs",
     ":semanticCommits",
-    ":group:allNonMajor",
-    ":group:allMajor"
+    "group:all"
   ],
   "timezone": "Europe/London",
   "azure-pipelines": {
