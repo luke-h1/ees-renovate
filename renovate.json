@@ -32,15 +32,28 @@
   },
   "packageRules": [
     {
-      "groupName": "All minor dependencies",
+      "groupName": "All frontend minor dependencies",
       "matchUpdateTypes": ["minor"],
-      "matchPackageNames": ["^@explore-education-statistics-"],
+      "matchPaths": [
+        "package.json",
+        "src/explore-education-statistics-admin",
+        "src/explore-education-statistics-ckeditor",
+        "src/explore-education-statistics-common",
+        "src/explore-education-statistics-frontend"
+      ],
       "labels": ["minor dependencies"]
     },
     {
-      "groupName": "All major dependencies",
+      "groupName": "All frontend major dependencies",
       "matchUpdateTypes": ["major"],
-      "labels": ["major dependencies"]
+      "labels": ["major dependencies"],
+      "matchPaths": [
+        "package.json",
+        "src/explore-education-statistics-admin",
+        "src/explore-education-statistics-ckeditor",
+        "src/explore-education-statistics-common",
+        "src/explore-education-statistics-frontend"
+      ]
     },
     {
       "matchManagers": ["pipenv", "pyenv"],
