@@ -39,7 +39,7 @@
     "globby": "^11.0.4",
     "node-stream-zip": "^1.15.0",
     "ora": "5.4.1",
-    "pino": "8.4.1",
+    "pino": "8.4.2",
     "pino-pretty": "^9.0.1",
     "rimraf": "^3.0.2",
     "uuid": "^8.3.2"
