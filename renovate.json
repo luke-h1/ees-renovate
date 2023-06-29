@@ -24,7 +24,6 @@
     "branchTopic": "{{{datasource}}}-{{{depName}}}-vulnerability",
     "prCreation": "immediate"
   },
-  // group all frontend packages (explore-education-statistics-*) into one single PR
   "packageRules": [
     {
       "matchPackageNames": ["explore-education-statistics-*"],
