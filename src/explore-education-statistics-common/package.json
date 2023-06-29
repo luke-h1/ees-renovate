@@ -79,7 +79,7 @@
     "react-modal": "^3.12.1",
     "react-test-renderer": "16.13.1",
     "recharts": "^2.1.16",
-    "regenerator-runtime": "0.13.9",
+    "regenerator-runtime": "0.13.11",
     "sanitize-html": "^2.10.0",
     "stylelint": "^13.13.1",
     "typescript": "^4.9.5",
