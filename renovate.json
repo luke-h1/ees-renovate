@@ -4,7 +4,10 @@
     "config:base",
     ":preserveSemverRanges",
     ":rebaseStalePrs",
-    ":semanticCommits"
+    ":semanticCommits",
+    ":separateMultipleMajorReleases",
+    ":separatePatchReleases",
+    "group:allNonMajor"
   ],
 
   "lockFileMaintenance": {
