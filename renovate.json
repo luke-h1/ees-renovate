@@ -6,8 +6,7 @@
     ":rebaseStalePrs",
     ":semanticCommits",
     ":separateMultipleMajorReleases",
-    ":separatePatchReleases",
-    "group:allNonMajor"
+    ":separatePatchReleases"
   ],
 
   "lockFileMaintenance": {
