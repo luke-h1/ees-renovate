@@ -6,7 +6,6 @@
     ":separatePatchReleases",
     ":preserveSemverRanges",
     ":rebaseStalePrs",
-    "group:allNonMajor",
     ":semanticCommits"
   ],
 
