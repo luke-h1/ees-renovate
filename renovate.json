@@ -32,35 +32,44 @@
   },
   "packageRules": [
     {
-      "matchPackagePatterns": ["*"],
-      "rangeStrategy": "replace"
+      "groupName": "Admin minor dependencies",
+      "matchUpdateTypes": ["minor"],
+      "matchFiles": ["src/explore-education-statistics-admin/package.json"]
     },
     {
-      "matchPackageNames": ["@ckeditor"],
-      "enabled": false
+      "groupName": "Admin major dependencies",
+      "matchUpdateTypes": ["major"],
+      "matchFiles": ["src/explore-education-statistics-admin/package.json"]
     },
     {
-      "matchDatasources": ["azure-pipelines-tasks"],
-      "extractVersion": "^(?<version>\\d+)",
-      "description": "Azure Pipelines Tasks"
+      "groupName": "common minor dependencies",
+      "matchUpdateTypes": ["minor"],
+      "matchFiles": ["src/explore-education-statistics-common/package.json"]
     },
     {
-      "matchManagers": ["nuget"],
-      "matchFiles": ["\\.csproj$"],
-      "groupSlug": "dotnet",
-      "groupName": "Backend non-major dependencies",
-      "matchUpdateTypes": [
-        "minor"
-      ]
+      "groupName": "common major dependencies",
+      "matchUpdateTypes": ["major"],
+      "matchFiles": ["src/explore-education-statistics-common/package.json"]
     },
     {
-      "matchManagers": ["nuget"],
-      "matchFiles": ["\\.csproj$"],
-      "groupSlug": "dotnet",
-      "groupName": "Backend major dependencies",
-      "matchUpdateTypes": [
-        "major"
-      ]
+      "groupName": "ckeditor minor dependencies",
+      "matchUpdateTypes": ["minor"],
+      "matchFiles": ["src/explore-education-statistics-ckeditor/package.json"]
+    },
+    {
+      "groupName": "ckeditor major dependencies",
+      "matchUpdateTypes": ["major"],
+      "matchFiles": ["src/explore-education-statistics-ckeditor/package.json"]
+    },
+    {
+      "groupName": "frontend minor dependencies",
+      "matchUpdateTypes": ["minor"],
+      "matchFiles": ["src/explore-education-statistics-frontend/package.json"]
+    },
+    {
+      "groupName": "frontend major dependencies",
+      "matchUpdateTypes": ["major"],
+      "matchFiles": ["src/explore-education-statistics-frontend/package.json"]
     },
     {
       "matchManagers": ["pipenv", "pyenv"],
@@ -69,23 +78,6 @@
       "description": "Python dependencies",
       "matchUpdateTypes": [
         "minor",
-        "major"
-      ]
-    },
-    {
-      "matchManagers": ["npm"],
-      "groupSlug": "frontend",
-      "groupName": "Frontend minor dependencies",
-      "matchUpdateTypes": [
-        "minor"
-      ]
-    },
-    {
-      "matchManagers": ["npm"],
-      "groupSlug": "frontend",
-      "groupName": "Frontend dependencies",
-      "description": "Frontend major dependencies",
-      "matchUpdateTypes": [
         "major"
       ]
     }
