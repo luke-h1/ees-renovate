@@ -24,12 +24,14 @@
     "branchTopic": "{{{datasource}}}-{{{depName}}}-vulnerability",
     "prCreation": "immediate"
   },
+  // group all frontend packages (explore-education-statistics-*) into one single PR
   "packageRules": [
     {
-      "matchPackagePrefixes": ["\"([^\"]+)\\\":\\\\s*\\\"\""],
-      "groupName": "renovate",
-      "updateTypes": ["minor", "patch", "pin"],
-      "prCreation": "immediate"
+      "matchPackageNames": ["explore-education-statistics-*"],
+      "groupName": "frontend",
+      "groupSlug": "explore-education-statistics",
+      "groupDescription": "Frontend packages"
+      
     }
   ]
 }
