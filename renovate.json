@@ -8,7 +8,9 @@
     ":preserveSemverRanges",
     ":rebaseStalePrs",
     ":semanticCommits",
-    "group:all"
+    "group:all",
+    "group:react",
+    "group:dotnetMonorepo"
   ],
   "timezone": "Europe/London",
   "azure-pipelines": {
