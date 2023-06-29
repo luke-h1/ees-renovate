@@ -28,14 +28,14 @@ jobs:
     fetchDepth: 5
     fetchTags: false
 
-  - task: UsePythonVersion@0
+  - task: UsePythonVersion@0.220.0
     displayName: Use Python 3.10
   # retryCountOnTaskFailure: 2
     timeoutInMinutes: 5
     inputs:
       versionSpec: 3.10
 
-  - task: AzureKeyVault@2
+  - task: AzureKeyVault@2.223.0
     displayName: 'Azure Key Vault: s101d01-kv-ees-01'
     inputs:
       azureSubscription: 's101-datahub-development-spn-ees'
@@ -43,7 +43,7 @@ jobs:
       SecretsFilter: ees-test-ADMIN-PASSWORD,ees-test-ANALYST-PASSWORD,ees-test-SLACK-BOT-TOKEN,ees-test-SLACK-TEST-REPORT-WEBHOOK-URL
       RunAsPreJob: true
 
-  - task: PythonScript@0
+  - task: PythonScript@0.213.0
     displayName: Public UI tests
     inputs:
       scriptPath: tests/robot-tests/scripts/run_tests_pipeline.py
@@ -61,14 +61,14 @@ jobs:
   #    arguments: --admin-pass "test" --analyst-pass "test" --expiredinvite-pass "test" --env "dev" --file "tests/general_public/" --processes 2 --rerun-failed-suites
   #    workingDirectory: tests/robot-tests
 
-  - task: PublishTestResults@2
+  - task: PublishTestResults@2.216.2
     displayName: Publish Test Results
     condition: succeededOrFailed()
     inputs:
       testResultsFiles: tests/robot-tests/test-results/xunit.xml
       failTaskOnFailedTests: false
 
-  - task: PublishPipelineArtifact@1
+  - task: PublishPipelineArtifact@1.199.0
     displayName: Publish Test Pipeline Artifact
     inputs:
       path: tests/robot-tests/test-results/
@@ -87,14 +87,14 @@ jobs:
     fetchDepth: 5
     fetchTags: false
 
-  - task: UsePythonVersion@0
+  - task: UsePythonVersion@0.220.0
     displayName: Use Python 3.10
   # retryCountOnTaskFailure: 2
     timeoutInMinutes: 5
     inputs:
       versionSpec: 3.10
 
-  - task: AzureKeyVault@2
+  - task: AzureKeyVault@2.223.0
     displayName: 'Azure Key Vault: s101d01-kv-ees-01'
     inputs:
       azureSubscription: 's101-datahub-development-spn-ees'
@@ -102,7 +102,7 @@ jobs:
       SecretsFilter: ees-test-ADMIN-PASSWORD,ees-test-ANALYST-PASSWORD,ees-test-expiredinvite-password,ees-test-SLACK-BOT-TOKEN,ees-test-SLACK-TEST-REPORT-WEBHOOK-URL
       RunAsPreJob: true
 
-  - task: PythonScript@0
+  - task: PythonScript@0.213.0
     displayName: Publish release and amend UI tests
     condition: succeededOrFailed()
     inputs:
@@ -122,13 +122,13 @@ jobs:
   #    arguments: --admin-pass '"$(ees-test-ADMIN-PASSWORD)"' --analyst-pass '"$(ees-test-ANALYST-PASSWORD)"' --expiredinvite-pass '"$(ees-test-expiredinvite-password)"' --env "dev" --file "tests/admin_and_public_2" --processes 2 --rerun-failed-suites
   #    workingDirectory: tests/robot-tests
 
-  - task: PublishTestResults@2
+  - task: PublishTestResults@2.216.2
     displayName: Publish Test Results
     inputs:
       testResultsFiles: tests/robot-tests/test-results/xunit.xml
       failTaskOnFailedTests: false
 
-  - task: PublishPipelineArtifact@1
+  - task: PublishPipelineArtifact@1.199.0
     displayName: Publish Pipeline Artifact
     inputs:
       path: tests/robot-tests/test-results/
@@ -147,14 +147,14 @@ jobs:
     fetchDepth: 5
     fetchTags: false
 
-  - task: UsePythonVersion@0
+  - task: UsePythonVersion@0.220.0
     displayName: Use Python 3.10
   # retryCountOnTaskFailure: 2
     timeoutInMinutes: 5
     inputs:
       versionSpec: 3.10
 
-  - task: AzureKeyVault@2
+  - task: AzureKeyVault@2.223.0
     displayName: 'Azure Key Vault: s101d01-kv-ees-01'
     inputs:
       azureSubscription: 's101-datahub-development-spn-ees'
@@ -162,7 +162,7 @@ jobs:
       SecretsFilter: ees-test-ADMIN-PASSWORD,ees-test-ANALYST-PASSWORD,ees-test-expiredinvite-password,ees-test-SLACK-BOT-TOKEN,ees-test-SLACK-TEST-REPORT-WEBHOOK-URL
       RunAsPreJob: true
 
-  - task: PythonScript@0
+  - task: PythonScript@0.213.0
     displayName: Admin UI tests
     condition: succeededOrFailed()
     inputs:
@@ -181,14 +181,14 @@ jobs:
   #    arguments: --admin-pass  '"$(ees-test-ADMIN-PASSWORD)"' --analyst-pass  '"$(ees-test-ANALYST-PASSWORD)"' --expiredinvite-pass '"$(ees-test-expiredinvite-password)"' --env "dev" --file "tests/admin" --processes 2 --rerun-failed-suites
   #    workingDirectory: tests/robot-tests
 
-  - task: PublishTestResults@2
+  - task: PublishTestResults@2.216.2
     displayName: Publish Test Results
     condition: succeededOrFailed()
     inputs:
       testResultsFiles: tests/robot-tests/test-results/xunit.xml
       failTaskOnFailedTests: false
 
-  - task: PublishPipelineArtifact@1
+  - task: PublishPipelineArtifact@1.199.0
     displayName: Publish Test Pipeline Artifact
     condition: succeededOrFailed()
     inputs:
@@ -208,14 +208,14 @@ jobs:
     fetchDepth: 5
     fetchTags: false
 
-  - task: UsePythonVersion@0
+  - task: UsePythonVersion@0.220.0
     displayName: Use Python 3.10
   # retryCountOnTaskFailure: 2
     timeoutInMinutes: 5
     inputs:
       versionSpec: 3.10
 
-  - task: AzureKeyVault@2
+  - task: AzureKeyVault@2.223.0
     displayName: 'Azure Key Vault: s101d01-kv-ees-01'
     inputs:
       azureSubscription: 's101-datahub-development-spn-ees'
@@ -223,7 +223,7 @@ jobs:
       SecretsFilter: ees-test-ADMIN-PASSWORD,ees-test-ANALYST-PASSWORD,ees-test-expiredinvite-password,ees-test-SLACK-BOT-TOKEN,ees-test-SLACK-TEST-REPORT-WEBHOOK-URL
       RunAsPreJob: true
 
-  - task: PythonScript@0
+  - task: PythonScript@0.213.0
     displayName: Admin public UI tests
     inputs:
       scriptPath: tests/robot-tests/scripts/run_tests_pipeline.py
@@ -241,12 +241,12 @@ jobs:
   #    arguments: --admin-pass  '"$(ees-test-ADMIN-PASSWORD)"' --analyst-pass  '"$(ees-test-ANALYST-PASSWORD)"' --expiredinvite-pass '"$(ees-test-expiredinvite-password)"' --env "dev" --file "tests/admin_and_public" --processes 2 --rerun-failed-suites
   #    workingDirectory: tests/robot-tests
 
-  - task: PublishTestResults@2
+  - task: PublishTestResults@2.216.2
     displayName: Publish Test Results
     inputs:
       testResultsFiles: tests/robot-tests/test-results/xunit.xml
 
-  - task: PublishPipelineArtifact@1
+  - task: PublishPipelineArtifact@1.199.0
     displayName: Publish Test Pipeline Artifact
     inputs:
       path: tests/robot-tests/test-results/
