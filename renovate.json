@@ -26,10 +26,14 @@
   },
   "packageRules": [
     {
-      "groupName": "Frontend dependencies",
-      "matchPackagePatterns": [
-        "explore-education-*"
-      ]
+      "matchFiles": [
+        "package.json",
+        "src/explore-education-statistics-admin/package.json",
+        "src/explore-education-statistics-common/package.json",
+        "src/explore-education-statistics-ckeditor/package.json",
+        "src/explore-education-statistics-frontend/package.json"
+      ],
+      "groupName": "Frontend dependencies"
     }
   ]
 }
