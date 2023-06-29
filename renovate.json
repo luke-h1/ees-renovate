@@ -34,13 +34,11 @@
       "groupName": "All frontend minor dependencies",
       "matchUpdateTypes": ["minor"],
       "matchManagers": ["npm"],
-       
-      "matchFiles": [
-        "package.json",
-        "src/explore-education-statistics-admin/package.json",
-        "src/explore-education-statistics-ckeditor/package.json",
-        "src/explore-education-statistics-common/package.json",
-        "src/explore-education-statistics-frontend/package.json"
+      "matchPackagePatterns": [
+        "explore-education-statistics-admin",
+        "explore-education-statistics-ckeditor",
+        "explore-education-statistics-common",
+        "explore-education-statistics-frontend"
       ],
       "labels": ["minor dependencies"]
     },
@@ -49,19 +47,18 @@
       "matchUpdateTypes": ["major"],
       "matchManagers": ["npm"],
       "labels": ["major dependencies"],
-      "matchFiles": [
-        "package.json",
-        "src/explore-education-statistics-admin/package.json",
-        "src/explore-education-statistics-ckeditor/package.json",
-        "src/explore-education-statistics-common/package.json",
-        "src/explore-education-statistics-frontend/package.json"
-      ]
+      "matchPackagePatterns": [
+        "explore-education-statistics-admin",
+        "explore-education-statistics-ckeditor",
+        "explore-education-statistics-common",
+        "explore-education-statistics-frontend"
+      ],
     },
     {
       "matchManagers": ["pipenv", "pyenv"],
       "groupSlug": "python",
       "groupName": "Python dependencies",
-      "description": "Python dependencies", 
+      "description": "Python dependencies",
       "matchUpdateTypes": ["minor", "major"]
     },
     {
