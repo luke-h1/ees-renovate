@@ -21,16 +21,28 @@
   "packageRules": [
     {
       "matchDatasources": ["npm"],
-      "groupName": "npm"
+      "groupName": "Frontend dependencies"
     },
     {
       "matchDatasources": ["nuget"],
-      "groupName": "nuget"
+      "groupName": "Backend dependencies"
     },
     {
-      "matchDatasources": ["pipenv"],
-      "groupName": "pipenv"
+      "matchDatasources": ["pypi"],
+      "groupName": "python dependencies"
+    },
+    {
+      "matchDatasources": ["node-version"],
+      "groupName": "node version updates"
+    },
+    {
+      "matchDatasources": ["docker"],
+      "groupName": "docker image updates"
+    },
+    {
+      "matchDatasources": ["azure-pipelines-tasks"],
+      "groupName": "azure-pipelines-tasks updates",
+      "extractVersion": "^(?<version>\\d+)"
     }
-
   ]
 }
