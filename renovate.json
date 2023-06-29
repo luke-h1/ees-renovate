@@ -21,11 +21,23 @@
   "packageRules": [
     {
       "matchDatasources": ["npm"],
-      "groupName": "Frontend dependencies"
+      "groupName": "Minor frontend dependencies",
+      "matchUpdateTypes": ["minor", "patch"]
+    },
+    {
+      "matchDatasources": ["npm"],
+      "groupName": "Major frontend dependencies",
+      "matchUpdateTypes": ["major"]
     },
     {
       "matchDatasources": ["nuget"],
-      "groupName": "Backend dependencies"
+      "groupName": "Minor backend dependencies",
+      "matchUpdateTypes": ["minor", "patch"]
+    },
+    {
+      "matchDatasources": ["nuget"],
+      "groupName": "Major backend dependencies",
+      "matchUpdateTypes": ["major"]
     },
     {
       "matchDatasources": ["pypi"],
