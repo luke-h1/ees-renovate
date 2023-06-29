@@ -1,7 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "ignorePaths": ["useful-scripts/**"],
-    "extends": [
+  "extends": [
     "config:base",
     ":separateMultipleMajorReleases",
     ":separatePatchReleases",
@@ -26,14 +26,10 @@
   },
   "packageRules": [
     {
-      "matchFiles": [
-        "package.json",
-        "src/explore-education-statistics-admin/package.json",
-        "src/explore-education-statistics-common/package.json",
-        "src/explore-education-statistics-ckeditor/package.json",
-        "src/explore-education-statistics-frontend/package.json"
-      ],
-      "groupName": "Frontend dependencies"
+      "matchPackagePrefixes": ["\"([^\"]+)\\\":\\\\s*\\\"\""],
+      "groupName": "renovate",
+      "updateTypes": ["minor", "patch", "pin"],
+      "prCreation": "immediate"
     }
   ]
 }
