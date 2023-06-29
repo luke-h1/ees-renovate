@@ -3,13 +3,11 @@
   "ignorePaths": ["useful-scripts/**"],
   "extends": [
     "config:base",
-    ":separateMultipleMajorReleases",
     ":separatePatchReleases",
     ":preserveSemverRanges",
     ":rebaseStalePrs",
     ":semanticCommits",
-    "group:react",
-    "group:dotnetMonorepo"
+    "group:byManager"
   ],
   "timezone": "Europe/London",
   "azure-pipelines": {
@@ -25,9 +23,6 @@
     "prCreation": "immediate"
   },
   "packageRules": [
-    {
-      "matchPackageNames": ["explore-education-statistics-*"],
-      "groupSlug": "explore-education-statistics"
-    }
+
   ]
 }
