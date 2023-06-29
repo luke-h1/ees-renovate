@@ -9,7 +9,7 @@
     "group:allNonMajor",
     ":semanticCommits"
   ],
-  
+
   "lockFileMaintenance": {
     "commitMessageAction": "Update",
     "extends": ["group:all"],
@@ -32,54 +32,23 @@
   },
   "packageRules": [
     {
-      "groupName": "Admin minor dependencies",
+      "groupName": "All minor dependencies",
       "matchUpdateTypes": ["minor"],
-      "matchFiles": ["src/explore-education-statistics-admin/package.json"]
+      "matchPackagePatterns": ["^@explore-education-statistics-"],
+      "labels": ["minor dependencies"]
     },
     {
-      "groupName": "Admin major dependencies",
+      "groupName": "All major dependencies",
       "matchUpdateTypes": ["major"],
-      "matchFiles": ["src/explore-education-statistics-admin/package.json"]
-    },
-    {
-      "groupName": "common minor dependencies",
-      "matchUpdateTypes": ["minor"],
-      "matchFiles": ["src/explore-education-statistics-common/package.json"]
-    },
-    {
-      "groupName": "common major dependencies",
-      "matchUpdateTypes": ["major"],
-      "matchFiles": ["src/explore-education-statistics-common/package.json"]
-    },
-    {
-      "groupName": "ckeditor minor dependencies",
-      "matchUpdateTypes": ["minor"],
-      "matchFiles": ["src/explore-education-statistics-ckeditor/package.json"]
-    },
-    {
-      "groupName": "ckeditor major dependencies",
-      "matchUpdateTypes": ["major"],
-      "matchFiles": ["src/explore-education-statistics-ckeditor/package.json"]
-    },
-    {
-      "groupName": "frontend minor dependencies",
-      "matchUpdateTypes": ["minor"],
-      "matchFiles": ["src/explore-education-statistics-frontend/package.json"]
-    },
-    {
-      "groupName": "frontend major dependencies",
-      "matchUpdateTypes": ["major"],
-      "matchFiles": ["src/explore-education-statistics-frontend/package.json"]
+      "matchPackagePatterns": ["^@explore-education-statistics-"],
+      "labels": ["major dependencies"]
     },
     {
       "matchManagers": ["pipenv", "pyenv"],
       "groupSlug": "python",
       "groupName": "Python dependencies",
       "description": "Python dependencies",
-      "matchUpdateTypes": [
-        "minor",
-        "major"
-      ]
+      "matchUpdateTypes": ["minor", "major"]
     }
   ]
 }
