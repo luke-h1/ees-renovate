@@ -45,7 +45,8 @@
       "extractVersion": "^(?<version>\\d+)"
     },
     {
-      "excludeDepNames": ["@ckeditor/*", "Mime", "Mime-Detective"]
+      "matchPackagePatterns": ["^@ckeditor/", "Mime", "Mime-Detective"],
+      "enabled": false
     }
   ]
 }
