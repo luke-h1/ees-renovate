@@ -22,6 +22,10 @@
     {
       "matchManagers": ["nuget"],
       "groupName": "{{manager}}"
+    },
+    {
+      "matchManagers": ["pipenv"],
+      "groupName": "{{manager}}"
     }
 
   ]
