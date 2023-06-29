@@ -34,13 +34,12 @@
     {
       "groupName": "All minor dependencies",
       "matchUpdateTypes": ["minor"],
-      "matchPackagePatterns": ["^@explore-education-statistics-"],
+      "matchPackageNames": ["^@explore-education-statistics-"],
       "labels": ["minor dependencies"]
     },
     {
       "groupName": "All major dependencies",
       "matchUpdateTypes": ["major"],
-      "matchPackagePatterns": ["^@explore-education-statistics-"],
       "labels": ["major dependencies"]
     },
     {
