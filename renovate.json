@@ -20,7 +20,7 @@
       "matchDatasources": ["npm"],
       "groupName": "Minor frontend dependencies",
       "matchUpdateTypes": ["minor", "patch"],
-      "schedule": ["before 8am every month on the 1st"],
+      "schedule": ["before 8am every weekday", "on the first day of the month"],
       "enabled": false
     },
     {
@@ -28,7 +28,8 @@
       "groupName": "Major frontend dependencies",
       "matchUpdateTypes": ["major"],
       "schedule": [
-        "before 8am every 3 months on the 1st"
+        "before 8am every weekday",
+        "every 3 months on the first day of the month"
       ],
       "enabled": false
     },
@@ -36,14 +37,15 @@
       "matchDatasources": ["nuget"],
       "groupName": "Minor backend dependencies",
       "matchUpdateTypes": ["minor", "patch"],
-      "schedule": ["before 8am every month on the 1st"]
+      "schedule": ["before 8am every weekday", "on the first day of the month"]
     },
     {
       "matchDatasources": ["nuget"],
       "groupName": "Major backend dependencies",
       "matchUpdateTypes": ["major"],
       "schedule": [
-        "before 8am every 3 months on the 1st"
+        "before 8am every weekday",
+        "every 3 months on the first day of the month"
       ]
     },
     {
